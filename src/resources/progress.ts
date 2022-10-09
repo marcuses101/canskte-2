@@ -19,18 +19,18 @@ export const ribbons: { id: RibbonId; requiredCheckmarks: number; totalCheckmark
 	{ id: '2-B', requiredCheckmarks: 4, totalCheckmarks: 4 },
 	{ id: '2-C', requiredCheckmarks: 3, totalCheckmarks: 4 },
 	{ id: '2-A', requiredCheckmarks: 3, totalCheckmarks: 4 },
-	{ id: '3-B', requiredCheckmarks: 4, totalCheckmarks: 4 },
+	{ id: '3-B', requiredCheckmarks: 5, totalCheckmarks: 5 },
 	{ id: '3-C', requiredCheckmarks: 5, totalCheckmarks: 5 },
 	{ id: '3-A', requiredCheckmarks: 5, totalCheckmarks: 5 },
-	{ id: '4-B', requiredCheckmarks: 5, totalCheckmarks: 5 },
-	{ id: '4-C', requiredCheckmarks: 5, totalCheckmarks: 7 },
+	{ id: '4-B', requiredCheckmarks: 5, totalCheckmarks: 7 },
+	{ id: '4-C', requiredCheckmarks: 5, totalCheckmarks: 6 },
 	{ id: '4-A', requiredCheckmarks: 5, totalCheckmarks: 6 },
 	{ id: '5-B', requiredCheckmarks: 5, totalCheckmarks: 7 },
 	{ id: '5-C', requiredCheckmarks: 5, totalCheckmarks: 7 },
 	{ id: '5-A', requiredCheckmarks: 6, totalCheckmarks: 7 },
-	{ id: '6-B', requiredCheckmarks: 6, totalCheckmarks: 7 },
-	{ id: '6-C', requiredCheckmarks: 6, totalCheckmarks: 7 },
-	{ id: '6-A', requiredCheckmarks: 6, totalCheckmarks: 7 }
+	{ id: '6-B', requiredCheckmarks: 6, totalCheckmarks: 8 },
+	{ id: '6-C', requiredCheckmarks: 6, totalCheckmarks: 8 },
+	{ id: '6-A', requiredCheckmarks: 6, totalCheckmarks: 8 }
 ];
 
 export const checkmarks: CheckmarkId[] = [
