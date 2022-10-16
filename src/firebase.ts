@@ -16,10 +16,19 @@ const firebaseConfig = {
 	appId: '1:462314651566:web:11601ff2e6b5c0e0ed123f',
 	measurementId: 'G-X3Z3XDR96C'
 };
-export let app: FirebaseApp | undefined;
-export let db: Firestore | undefined;
-// Initialize Firebase
-if (browser && typeof app === 'undefined') {
-	app = initializeApp(firebaseConfig);
-	db = getFirestore(app);
-}
+
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+
+// export let app: FirebaseApp | undefined;
+// export let db: Firestore | undefined;
+
+// function initializeFirebase() {
+// 	if (typeof app === 'undefined' && browser) {
+// 		console.log('initializing firebase');
+// 		app = initializeApp(firebaseConfig);
+// 		db = getFirestore(app);
+// 	}
+// }
+
+// initializeFirebase();

@@ -9,7 +9,8 @@ const config = {
 
 	kit: {
 		alias: {
-			components: 'src/components'
+			components: 'src/components',
+			resources: 'src/resources'
 		},
 		adapter: adapter({ out: 'build' })
 	}

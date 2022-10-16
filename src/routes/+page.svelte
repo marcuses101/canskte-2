@@ -1,17 +1,20 @@
 <script lang="ts">
-	import { app, db } from '../firebase';
-	import { collection, addDoc } from 'firebase/firestore';
+	import { db } from '../firebase';
+	import { collection, addDoc, deleteDoc, doc, Timestamp } from 'firebase/firestore';
 	import { getTodosStore } from '../stores';
 	import { Test } from 'components';
-	console.log({ app, db });
 	let text: string = '';
 	let todosStore = getTodosStore();
 
 	function addTodo() {
-		if (!db) return;
-		addDoc(collection(db, 'todo'), { text });
+		addDoc(collection(db, 'todo'), { text, creationTime: Timestamp.now() });
 		text = '';
 	}
+
+	function removeTodo(id: string) {
+		deleteDoc(doc(db, 'todo', id));
+	}
+	const formatter = new Intl.DateTimeFormat('en-CA', { dateStyle: 'long' }).format;
 </script>
 
 <Test />
@@ -19,8 +22,17 @@
 	<input bind:value={text} />
 	<button type="submit">Add</button>
 	<ul>
-		{#each $todosStore as todo}
-			<li>{todo}</li>
+		{#each $todosStore as { id, text, creationTime }}
+			<li>
+				{text}
+				<button
+					type="button"
+					on:click={() => {
+						removeTodo(id);
+					}}>x</button
+				>
+				{formatter(creationTime)}
+			</li>
 		{/each}
 	</ul>
 </form>
